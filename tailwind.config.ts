@@ -21,6 +21,10 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        "hero-image": "url('/anyrand-background.png')",
+        "hero-image-dark": "url('/anyrand-bg-dark.png')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
