@@ -1,5 +1,5 @@
 "use client";
-import { ChevronsDown, Github, Menu } from "lucide-react";
+import { ChevronsDown, Github, Twitter, Menu } from "lucide-react";
 import React from "react";
 import {
   Sheet,
@@ -43,12 +43,12 @@ const routeList: RouteProps[] = [
     label: "Pricing",
   },
   {
-    href: "#contact",
-    label: "GitHub",
+    href: "https://x.com/anyrandVRF",
+    label: "Twitter/X",
   },
   {
-    href: "#faq",
-    label: "Discord",
+    href: "https://github.com/frogworksio/anyrand",
+    label: "GitHub",
   },
 ];
 
@@ -143,6 +143,15 @@ export const Navbar = () => {
       <div className="hidden lg:flex">
         <ToggleTheme />
 
+        <Button asChild size="sm" variant="ghost" aria-label="Follow on Twitter/X">
+          <Link
+            aria-label="Follow on Twitter/X"
+            href="https://x.com/anyrandVRF"
+            target="_blank"
+          >
+            <Twitter className="size-5" />
+          </Link>
+        </Button>
         <Button asChild size="sm" variant="ghost" aria-label="View on GitHub">
           <Link
             aria-label="View on GitHub"
