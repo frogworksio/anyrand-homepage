@@ -40,7 +40,7 @@ const featureList: FeaturesProps[] = [
   },
   {
     icon: "Gift",
-    title: "Randomized Token Distribution",
+    title: "Token Distribution",
     description:
       "Randomly select wallet addresses to provide a fair and verifiable distribution process for token distributions or rewards.",
     colorClass: "text-purple-500", // Color for this icon
