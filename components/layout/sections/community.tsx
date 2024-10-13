@@ -1,5 +1,6 @@
 import DiscordIcon from "@/components/icons/discord-icon";
 import { Button } from "@/components/ui/button";
+import { ArrowUpRight } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -31,9 +32,10 @@ export const CommunitySection = () => {
             </CardContent>
 
             <CardFooter>
-              <Button asChild>
+              <Button asChild className="group/arrow">
                 <a href="https://t.me/anyrandVRF" target="_blank">
                   Join on Telegram
+                  <ArrowUpRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
                 </a>
               </Button>
             </CardFooter>
