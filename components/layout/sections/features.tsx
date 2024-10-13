@@ -40,9 +40,9 @@ const featureList: FeaturesProps[] = [
   },
   {
     icon: "Gift",
-    title: "Randomized Airdrops",
+    title: "Randomized Token Distribution",
     description:
-      "Projects can use anyrand VRF to randomly select wallet addresses for airdrops, providing a fair and verifiable distribution process for tokens or rewards.",
+      "From UBI to project airdrops… Randomly select wallet addresses to provide a fair and verifiable distribution process for token distributions or rewards.",
     colorClass: "text-purple-500", // Color for this icon
   },
   {

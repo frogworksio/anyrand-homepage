@@ -30,7 +30,7 @@ const reviewList: ReviewProps[] = [
     name: "LottoPGF",
     userName: "lottopgf.org",
     comment:
-      "LottoPGF allows everyone to launch customisable fully onchain “Lottos” (number lotteries) to fund public good causes, all secured on Ethereum.",
+      "LottoPGF allows anyone to incentivise funding of public goods through customisable, fully onchain “Lottos” (number lotteries), all secured on Ethereum.",
     rating: 5.0,
   },
   {
@@ -38,7 +38,7 @@ const reviewList: ReviewProps[] = [
     name: "Octant",
     userName: "octant.build",
     comment:
-      "Octant Public Goods Sweepstakes powered by AnyRand VRF! Stake ETH in Octant, support public goods, and win up to 200k $GLM. All winners chosen verifiably on-chain.",
+      "Octant Public Goods Sweepstakes uses Anyrand VRF to run a fair, verifiable raffle that rewards stakers of their $GLM token which is used to channel ETH staking rewards towards public goods.",
     rating: 4.8,
   },
 
