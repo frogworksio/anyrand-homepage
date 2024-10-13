@@ -27,7 +27,7 @@ export const CommunitySection = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="lg:w-[80%] text-xl text-muted-foreground">
-              Join our anyrand VRF Developer Support Telegram group! Get first-hand support from our team. Connect and let's chat about your verifiable randomness 🎲 use case with us!
+              Join our anyrand VRF Developer Support Telegram group! Get first-hand support from our team. Connect and let&apos;s chat about your verifiable randomness 🎲 use case with us!
             </CardContent>
 
             <CardFooter>
