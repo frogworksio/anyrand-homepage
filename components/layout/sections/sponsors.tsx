@@ -36,7 +36,7 @@ export const SponsorsSection = () => {
   return (
     <section id="sponsors" className="container w-full mt-20 mb-20">
       <h2 className="tracking-tight text-xl md:text-2xl text-center mb-8 font-medium">
-        Anyrand VRF coming next to
+        anyrand VRF coming next to
       </h2>
 
       <div className="mx-auto">

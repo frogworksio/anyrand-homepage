@@ -38,7 +38,7 @@ const reviewList: ReviewProps[] = [
     name: "Octant",
     userName: "octant.build",
     comment:
-      "Octant Public Goods Sweepstakes uses Anyrand VRF to run a fair, verifiable raffle that rewards stakers of their $GLM token which is used to channel ETH staking rewards towards public goods.",
+      "Octant Public Goods Sweepstakes uses anyrand VRF to run a fair, verifiable raffle that rewards stakers of their $GLM token which is used to channel ETH staking rewards towards public goods.",
     rating: 4.8,
   },
 
