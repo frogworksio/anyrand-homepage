@@ -26,7 +26,7 @@ const featureList: FeaturesProps[] = [
   },
   {
     icon: "UsersRound",
-    title: "Random Assignment in DAOs",
+    title: "Sortition for DAOs",
     description:
       "In decentralized governance models, anyrand VRF can be used to randomly select committee members or voters, ensuring unbiased and secure participation.",
     colorClass: "text-blue-500", // Color for this icon
