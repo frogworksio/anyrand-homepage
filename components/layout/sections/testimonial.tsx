@@ -26,52 +26,28 @@ interface ReviewProps {
 
 const reviewList: ReviewProps[] = [
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe",
-    userName: "Product Manager",
+    image: "testimonial-lottopgf.png",
+    name: "LottoPGF",
+    userName: "lottopgf.org",
     comment:
-      "Wow NextJs + Shadcn is awesome!. This template lets me change colors, fonts and images to match my brand identity. ",
+      "LottoPGF allows everyone to launch customisable fully onchain “Lottos” (number lotteries) to fund public good causes, all secured on Ethereum.",
     rating: 5.0,
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "Sophia Collins",
-    userName: "Cybersecurity Analyst",
+    image: "testimonial-octant.png",
+    name: "Octant",
+    userName: "octant.build",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. ",
+      "Octant Public Goods Sweepstakes powered by AnyRand VRF! Stake ETH in Octant, support public goods, and win up to 200k $GLM. All winners chosen verifiably on-chain.",
     rating: 4.8,
   },
 
   {
-    image: "https://github.com/shadcn.png",
-    name: "Adam Johnson",
-    userName: "Chief Technology Officer",
+    image: "testimonial-onchainlotteria.png",
+    name: "CryptoConexión",
+    userName: "cryptoconexion.com",
     comment:
-      "Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    rating: 4.9,
-  },
-  {
-    image: "https://github.com/shadcn.png",
-    name: "Ethan Parker",
-    userName: "Data Scientist",
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    rating: 5.0,
-  },
-  {
-    image: "https://github.com/shadcn.png",
-    name: "Ava Mitchell",
-    userName: "IT Project Manager",
-    comment:
-      "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud incididunt consectetur adipiscing elit.",
-    rating: 5.0,
-  },
-  {
-    image: "https://github.com/shadcn.png",
-    name: "Isabella Reed",
-    userName: "DevOps Engineer",
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "CryptoConexión community on Farcaster launched Onchain Lotería Farcaster Frame, a decentralized lottery game that uses anyrand VRF to ensure fair and transparent results.",
     rating: 4.9,
   },
 ];
@@ -81,11 +57,11 @@ export const TestimonialSection = () => {
     <section id="testimonials" className="container py-24 sm:py-32">
       <div className="text-center mb-8">
         <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
-          Testimonials
+          VRF in Action
         </h2>
 
         <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-          Hear What Our 1000+ Clients Say
+          Projects using anyrand VRF
         </h2>
       </div>
 
@@ -101,31 +77,37 @@ export const TestimonialSection = () => {
               key={review.name}
               className="md:basis-1/2 lg:basis-1/3"
             >
-              <Card className="bg-muted/50 dark:bg-card">
+              <Card className="bg-slate-200 dark:bg-card">
                 <CardContent className="pt-6 pb-0">
-                  <div className="flex gap-1 pb-6">
-                    <Star className="size-4 fill-primary text-primary" />
-                    <Star className="size-4 fill-primary text-primary" />
-                    <Star className="size-4 fill-primary text-primary" />
-                    <Star className="size-4 fill-primary text-primary" />
-                    <Star className="size-4 fill-primary text-primary" />
-                  </div>
-                  {`"${review.comment}"`}
+{/*                   <div className="flex gap-1 pb-6">
+                    {[...Array(5)].map((_, index) => (
+                      <Star
+                        key={index}
+                        className={`size-4 ${
+                          index < Math.round(review.rating)
+                            ? "fill-primary text-primary"
+                            : "text-gray-400"
+                        }`}
+                      />
+                    ))}
+                  </div> */}
+                  {`${review.comment}`}
                 </CardContent>
 
                 <CardHeader>
                   <div className="flex flex-row items-center gap-4">
                     <Avatar>
-                      <AvatarImage
-                        src="https://avatars.githubusercontent.com/u/75042455?v=4"
-                        alt="radix"
-                      />
-                      <AvatarFallback>SV</AvatarFallback>
+                      <AvatarImage src={review.image} alt={review.name} />
+                      <AvatarFallback>
+                        {review.name.split(" ").map((n) => n[0]).join("")}
+                      </AvatarFallback>
                     </Avatar>
 
                     <div className="flex flex-col">
                       <CardTitle className="text-lg">{review.name}</CardTitle>
-                      <CardDescription>{review.userName}</CardDescription>
+                      <CardDescription>
+                        {review.userName || "Anonymous User"}
+                      </CardDescription>
                     </div>
                   </div>
                 </CardHeader>

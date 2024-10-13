@@ -30,21 +30,6 @@ export const HeroSection = () => {
             Get started for free!
           </p>
 
-          <div className="hidden sm:block mb-14">
-            <span className="text-slate-500 text-xs font-bold font-mono">Celebrate Scroll EVM launch with us!</span>
-            <div className="mb-6">
-              <div className="inline-flex relative before:absolute">
-                <a target="_blank" rel="noopener noreferrer" className="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out group relative before:absolute before:inset-0 before:bg-slate-800 before:rounded-lg before:pointer-events-none flex flex-col items-center" href="http://dice.anyrand.com/">
-                  <span className="relative inline-flex items-center">
-                    <span className="mr-2" style={{ userSelect: "none", WebkitUserSelect: "none" }}>🎲</span>
-                    <pre>Mint commemorative NFT</pre>
-                    <span className="ml-2" style={{ userSelect: "none", WebkitUserSelect: "none" }}>🎲</span>
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-
           <div className="space-y-4 md:space-y-8 md:space-x-4">
             <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
               View docs

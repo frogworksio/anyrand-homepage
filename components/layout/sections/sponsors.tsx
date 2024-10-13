@@ -12,11 +12,11 @@ interface sponsorsProps {
 const sponsors: sponsorsProps[] = [
   {
     image: "logo-eth.svg",
-    name: "coming soon",
+    name: "mainnet coming soon",
   },
   {
     image: "logo-base.svg",
-    name: "coming soon",
+    name: "base coming soon",
   },
   {
     image: "logo-scroll.svg",
@@ -24,11 +24,11 @@ const sponsors: sponsorsProps[] = [
   },
   {
     image: "logo-gnosis.svg",
-    name: "coming soon",
+    name: "gnosis coming soon",
   },
   {
     image: "logo-op.svg",
-    name: "coming soon",
+    name: "optimism coming soon",
   },
 ];
 
@@ -36,7 +36,7 @@ export const SponsorsSection = () => {
   return (
     <section id="sponsors" className="container w-full mt-20 mb-20">
       <h2 className="tracking-tight text-lg md:text-xl text-center mb-8">
-        Anyrand VRF coming to
+        Anyrand VRF coming next to
       </h2>
 
       <div className="mx-auto">
@@ -52,7 +52,7 @@ export const SponsorsSection = () => {
               className="flex items-center text-xl md:text-2xl font-medium"
             >
               <img
-                src={image} // Use the image path instead of icon component
+                src={image}
                 alt={name}
                 className="mr-2"
                 height={24}

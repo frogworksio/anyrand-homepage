@@ -2,12 +2,12 @@ import { icons } from "lucide-react";
 
 export const Icon = ({
   name,
-  color,
+  color = "currentColor", // Set default color
   size,
   className,
 }: {
   name: keyof typeof icons;
-  color: string;
+  color?: string; // Mark color as optional
   size: number;
   className?: string;
 }) => {

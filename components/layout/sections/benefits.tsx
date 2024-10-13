@@ -11,27 +11,27 @@ interface BenefitsProps {
 const benefitList: BenefitsProps[] = [
   {
     icon: "Blocks",
-    title: "Build Brand Trust",
+    title: "Decentralized",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Randomness is generated through drand’s threshold cryptography, ensuring it cannot be manipulated or predicted.",
   },
   {
     icon: "LineChart",
-    title: "More Leads",
+    title: "Low-cost",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.",
+      "Use anyrand service for a small premium, or access the underlying randomness directly at no additional cost beyond gas fees.",
   },
   {
-    icon: "Wallet",
-    title: "Higher Conversions",
+    icon: "LockKeyholeOpen",
+    title: "Permissionless",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur. A odio velit cum aliquam",
+      "Open source and available as a public good for EVM networks, get easy access to VRF without centralized services.",
   },
   {
-    icon: "Sparkle",
-    title: "Test Marketing Ideas",
+    icon: "Globe",
+    title: "Made for EVMs",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Optimized for EVM chains using the new drand beacon network on the BN254 curve, for seamless integration into your EVM dApps.",
   },
 ];
 
@@ -40,15 +40,13 @@ export const BenefitsSection = () => {
     <section id="benefits" className="container py-24 sm:py-32">
       <div className="grid lg:grid-cols-2 place-items-center lg:gap-24">
         <div>
-          <h2 className="text-lg text-primary mb-2 tracking-wider">Benefits</h2>
+          <h2 className="text-lg text-primary mb-2">Key Benefits</h2>
 
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Your Shortcut to Success
+            What is anyrand VRF
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
-            ducimus reprehenderit architecto rerum similique facere odit
-            deleniti necessitatibus quo quae.
+          anyrand is a verifiable random number generator for EVM-compatible networks, providing developers with a decentralized and reliable source of randomness. Built on drand’s randomness beacon and optimized for EVM chains.
           </p>
         </div>
 
@@ -56,7 +54,7 @@ export const BenefitsSection = () => {
           {benefitList.map(({ icon, title, description }, index) => (
             <Card
               key={title}
-              className="bg-muted/50 dark:bg-card hover:bg-background transition-all delay-75 group/number"
+              className="bg-white dark:bg-card transition-all delay-75 group/number"
             >
               <CardHeader>
                 <div className="flex justify-between">
