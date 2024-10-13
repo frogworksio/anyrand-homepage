@@ -35,12 +35,12 @@ interface FeatureProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "#testimonials",
+    href: "https://docs.anyrand.com/",
     label: "Docs",
   },
   {
-    href: "#team",
-    label: "Pricing",
+    href: "https://t.me/anyrandVRF",
+    label: "Support",
   },
   {
     href: "https://x.com/anyrandVRF",
