@@ -2,32 +2,32 @@
 
 import { Marquee } from "@devnomic/marquee";
 import "@devnomic/marquee/dist/index.css";
+import Image from "next/image"; // Importing the Next.js Image component
 
 interface sponsorsProps {
-  image: string; // Updated from 'icon' to 'image'
+  image: string;
   name: string;
 }
 
-// Replace the 'icon' field with 'image', pointing to the images in the public folder
 const sponsors: sponsorsProps[] = [
   {
-    image: "logo-eth.svg",
+    image: "/logo-eth.svg", // Paths should be relative to the public folder
     name: "mainnet coming soon",
   },
   {
-    image: "logo-base.svg",
+    image: "/logo-base.svg",
     name: "base coming soon",
   },
   {
-    image: "logo-scroll.svg",
+    image: "/logo-scroll.svg",
     name: "live on Scroll",
   },
   {
-    image: "logo-gnosis.svg",
+    image: "/logo-gnosis.svg",
     name: "gnosis coming soon",
   },
   {
-    image: "logo-op.svg",
+    image: "/logo-op.svg",
     name: "optimism coming soon",
   },
 ];
@@ -51,12 +51,12 @@ export const SponsorsSection = () => {
               key={name}
               className="flex items-center text-xl md:text-2xl font-medium"
             >
-              <img
+              <Image
                 src={image}
                 alt={name}
+                width={24}  // Set image width
+                height={24} // Set image height
                 className="mr-2"
-                height={24}
-                width={24}
               />
               {name}
             </div>

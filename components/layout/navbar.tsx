@@ -21,7 +21,7 @@ import {
 import { useTheme } from "next-themes";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/image"; // Import Image from next/image
 import { ToggleTheme } from "./toogle-theme";
 
 interface RouteProps {
@@ -76,16 +76,19 @@ export const Navbar = () => {
   return (
     <header className="backdrop-blur bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky z-40 rounded-2xl flex justify-between items-center p-2">
       <Link href="/" className="font-bold text-lg flex items-center">
-        <img
+        <Image
           alt="Logo anyrand"
           src={
             theme === "dark"
               ? "/anyrand-logo-white.svg"
               : "/anyrand-logo-dark.svg"
           }
+          width={150} // Specify the appropriate width
+          height={60} // Specify the appropriate height
           className="max-h-20 w-full object-contain"
         />
       </Link>
+
       {/* <!-- Mobile --> */}
       <div className="flex items-center lg:hidden">
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -104,13 +107,15 @@ export const Navbar = () => {
               <SheetHeader className="mb-4 ml-4">
                 <SheetTitle className="flex items-center">
                   <Link href="/" className="flex items-center">
-                    <img
+                    <Image
                       alt="Logo anyrand"
                       src={
                         theme === "dark"
                           ? "/anyrand-logo-white.svg"
                           : "/anyrand-logo-dark.svg"
                       }
+                      width={150} // Specify the appropriate width
+                      height={60} // Specify the appropriate height
                       className="max-h-20 w-full object-contain"
                     />
                   </Link>
