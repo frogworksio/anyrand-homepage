@@ -35,7 +35,7 @@ const sponsors: sponsorsProps[] = [
 export const SponsorsSection = () => {
   return (
     <section id="sponsors" className="container w-full mt-20 mb-20">
-      <h2 className="tracking-tight text-lg md:text-xl text-center mb-8">
+      <h2 className="tracking-tight text-xl md:text-2xl text-center mb-8 font-medium">
         Anyrand VRF coming next to
       </h2>
 
@@ -49,7 +49,7 @@ export const SponsorsSection = () => {
           {sponsors.map(({ image, name }) => (
             <div
               key={name}
-              className="flex items-center text-xl md:text-2xl font-medium"
+              className="flex items-center text-lg md:text-xl"
             >
               <Image
                 src={image}
