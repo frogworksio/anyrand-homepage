@@ -11,7 +11,7 @@ export const HeroSection = () => {
   return (
     <section className="container w-full bg-contain bg-hero-image dark:bg-hero-image-dark">
 
-      <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32">
+      <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto pt-20 md:pt-32 pb-10 md:pb-16">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <Badge variant="outline" className="text-sm py-2">
             <span className="mr-2 text-primary">
@@ -66,6 +66,39 @@ export const HeroSection = () => {
             </Button>
           </div>
         </div>
+        <h4 className="mt-10 tracking-tight">
+          Powered by
+        </h4>
+        <div className="bg-slate-100/30 dark:bg-slate-950/30 backdrop-blur py-4 rounded">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+
+            <div className="-mx-6 grid grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-2">
+              <div className="bg-slate-400/5 dark:bg-slate-900/5 p-8 sm:p-10">
+                <a href="https://leagueofentropy.org/" target="_blank">
+                  <img
+                    alt="Logo League of Entropy"
+                    src="logo-loe.png"
+                    className="max-h-20 w-full object-contain"
+                  />
+                </a>
+              </div>
+              <div className="bg-slate-400/5 dark:bg-slate-900/5 p-6 sm:p-10">
+                <a href="https://drand.love/" target="_blank">
+                  <img
+                    alt="Logo drand"
+                    src={
+                      theme === "dark"
+                        ? "/logo-drand-white.svg"
+                        : "/logo-drand.svg"
+                    }
+                    className="max-h-20 w-full object-contain"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
