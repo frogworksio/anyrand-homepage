@@ -83,9 +83,9 @@ export const Navbar = () => {
               ? "/anyrand-logo-white.svg"
               : "/anyrand-logo-dark.svg"
           }
-          width={150} // Specify the appropriate width
-          height={60} // Specify the appropriate height
-          className="max-h-20 w-full object-contain"
+          width={144} // Specify the appropriate width
+          height={25.85} // Specify the appropriate height
+          className="object-contain"
         />
       </Link>
 
