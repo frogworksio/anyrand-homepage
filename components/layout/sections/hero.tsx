@@ -50,7 +50,7 @@ export const HeroSection = () => {
           </p>
 
           <div className="space-y-4 md:space-y-8 md:space-x-4">
-            <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
+            <Button asChild className="w-5/6 md:w-1/4 font-bold group/arrow">
             <Link
                 href="https://docs.anyrand.com/"
                 target="_blank"
