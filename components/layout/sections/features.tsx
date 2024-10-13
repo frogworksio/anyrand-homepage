@@ -14,42 +14,42 @@ const featureList: FeaturesProps[] = [
     icon: "Swords",
     title: "Onchain Games",
     description:
-      "Use anyrand VRF to provide secure, verifiable randomness in games, ensuring fairness in mechanics like loot drops, random events, or matchmaking.",
+      "Provide secure, verifiable randomness in games, ensuring fairness in mechanics like loot drops, random events, or matchmaking.",
     colorClass: "text-red-500",  // Color for this icon
   },
   {
     icon: "Clover",
     title: "Decentralized Lotteries",
     description:
-      "anyrand VRF enables transparent and tamper-proof random number generation for lottery systems, ensuring that results are fair and publicly verifiable.",
+      "anyrand VRF enables transparent and tamper-proof random number generation for lotteries and raffles, ensuring that results are fair and publicly verifiable.",
     colorClass: "text-green-500", // Color for this icon
   },
   {
     icon: "UsersRound",
     title: "Sortition for DAOs",
     description:
-      "In decentralized governance models, anyrand VRF can be used to randomly select committee members or voters, ensuring unbiased and secure participation.",
+      "Randomness can be used in decentralized governance models to select committee members or voters, ensuring unbiased and secure participation (like Athenian democracy).",
     colorClass: "text-blue-500", // Color for this icon
   },
   {
     icon: "ImagePlus",
     title: "NFT Minting",
     description:
-      "anyrand VRF can introduce verifiable randomness for minting NFTs with random traits, adding uniqueness and rarity in a transparent and fair manner.",
+      "Ensure fair minting of NFTs with random traits, adding uniqueness and rarity in a transparent and fair manner.",
     colorClass: "text-yellow-500", // Color for this icon
   },
   {
     icon: "Gift",
     title: "Randomized Token Distribution",
     description:
-      "From UBI to project airdrops… Randomly select wallet addresses to provide a fair and verifiable distribution process for token distributions or rewards.",
+      "Randomly select wallet addresses to provide a fair and verifiable distribution process for token distributions or rewards.",
     colorClass: "text-purple-500", // Color for this icon
   },
   {
     icon: "Gavel",
     title: "Secure Auctions",
     description:
-      "anyrand VRF can be used to introduce verifiable randomness in auction processes, ensuring fair and transparent winner selection or tie-breaking in decentralized bidding systems.",
+      "Introduce verifiable randomness in auction processes, ensuring fair and transparent winner selection or tie-breaking in decentralized bidding systems.",
     colorClass: "text-orange-500", // Color for this icon
   },
 ];
