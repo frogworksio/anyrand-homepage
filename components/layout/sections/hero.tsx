@@ -1,4 +1,5 @@
 "use client";
+import React, { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Vote } from "lucide-react";
@@ -7,7 +8,18 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const HeroSection = () => {
-  const { theme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
+  const [drandLogo, setDrandLogo] = useState("/logo-drand.svg"); // Default/fallback logo
+
+  // Update the logo when the theme is resolved
+  useEffect(() => {
+    if (resolvedTheme === "dark") {
+      setDrandLogo("/logo-drand-white.svg");
+    } else if (resolvedTheme === "light") {
+      setDrandLogo("/logo-drand.svg");
+    }
+  }, [resolvedTheme]); // Run this effect when the resolvedTheme changes
+
   return (
     <section className="container w-full bg-contain bg-hero-image dark:bg-hero-image-dark">
       <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto pt-20 md:pt-32 pb-10 md:pb-16">
@@ -16,7 +28,11 @@ export const HeroSection = () => {
             <span className="mr-2 text-primary">
               <Badge>New!</Badge>
             </span>
-            <a href="https://scroll.io/blog" target="_blank" className="hover:underline hover:decoration-2">
+            <a
+              href="https://scroll.io/blog"
+              target="_blank"
+              className="hover:underline hover:decoration-2"
+            >
               <span>We are live on Scroll</span>
             </a>
             <Image
@@ -51,12 +67,9 @@ export const HeroSection = () => {
 
           <div className="space-y-4 md:space-y-8 md:space-x-4">
             <Button asChild className="w-5/6 md:w-1/4 font-bold group/arrow">
-            <Link
-                href="https://docs.anyrand.com/"
-                target="_blank"
-              >
-              View docs
-              <ArrowUpRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
+              <Link href="https://docs.anyrand.com/" target="_blank">
+                View docs
+                <ArrowUpRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
               </Link>
             </Button>
 
@@ -65,16 +78,14 @@ export const HeroSection = () => {
               variant="outline"
               className="w-5/6 md:w-1/4 group/arrow"
             >
-              <Link
-                href="https://form.typeform.com/to/u4x7HLFx"
-                target="_blank"
-              >
+              <Link href="https://form.typeform.com/to/u4x7HLFx" target="_blank">
                 Vote next EVM
                 <Vote className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
               </Link>
             </Button>
           </div>
         </div>
+
         <h2 className="mt-10 tracking-tight">Powered by</h2>
         <div className="bg-slate-100/30 dark:bg-slate-950/30 backdrop-blur py-4 rounded">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -94,11 +105,7 @@ export const HeroSection = () => {
                 <a href="https://drand.love/" target="_blank">
                   <Image
                     alt="Logo drand"
-                    src={
-                      theme === "dark"
-                        ? "/logo-drand-white.svg"
-                        : "/logo-drand.svg"
-                    }
+                    src={drandLogo} // Dynamic logo based on the theme
                     width={150}
                     height={80}
                     className="max-h-20 w-full object-contain"

@@ -1,6 +1,6 @@
 "use client";
+import React, { useEffect, useState } from "react";
 import { ChevronsDown, Github, Twitter, Menu } from "lucide-react";
-import React from "react";
 import {
   Sheet,
   SheetContent,
@@ -71,18 +71,25 @@ const featureList: FeatureProps[] = [
 ];
 
 export const Navbar = () => {
-  const { theme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
   const [isOpen, setIsOpen] = React.useState(false);
+  const [logoSrc, setLogoSrc] = useState("/anyrand-logo-dark.svg"); // Default/fallback logo
+
+  // Update the logo when the theme is resolved
+  useEffect(() => {
+    if (resolvedTheme === "dark") {
+      setLogoSrc("/anyrand-logo-white.svg");
+    } else if (resolvedTheme === "light") {
+      setLogoSrc("/anyrand-logo-dark.svg");
+    }
+  }, [resolvedTheme]); // Run this effect when the resolvedTheme changes
+
   return (
     <header className="backdrop-blur bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky z-40 rounded-2xl flex justify-between items-center p-2">
       <Link href="/" className="font-bold text-lg flex items-center">
         <Image
           alt="Logo anyrand"
-          src={
-            theme === "dark"
-              ? "/anyrand-logo-white.svg"
-              : "/anyrand-logo-dark.svg"
-          }
+          src={logoSrc} // This will be dynamically updated
           width={144} // Specify the appropriate width
           height={25.85} // Specify the appropriate height
           className="object-contain"
@@ -109,11 +116,7 @@ export const Navbar = () => {
                   <Link href="/" className="flex items-center">
                     <Image
                       alt="Logo anyrand"
-                      src={
-                        theme === "dark"
-                          ? "/anyrand-logo-white.svg"
-                          : "/anyrand-logo-dark.svg"
-                      }
+                      src={logoSrc}
                       width={150} // Specify the appropriate width
                       height={60} // Specify the appropriate height
                       className="max-h-20 w-full object-contain"
@@ -131,7 +134,9 @@ export const Navbar = () => {
                     variant="ghost"
                     className="justify-start text-base"
                   >
-                    <Link target="_blank" href={href}>{label}</Link>
+                    <Link target="_blank" href={href}>
+                      {label}
+                    </Link>
                   </Button>
                 ))}
               </div>
@@ -152,7 +157,11 @@ export const Navbar = () => {
           <NavigationMenuItem>
             {routeList.map(({ href, label }) => (
               <NavigationMenuLink key={href} asChild>
-                <Link href={href} target="_blank" className="px-6 tracking-normal font-medium text-sm dark:text-slate-300 dark:hover:text-white transition duration-150 ease-in-out">
+                <Link
+                  href={href}
+                  target="_blank"
+                  className="px-6 tracking-normal font-medium text-sm dark:text-slate-300 dark:hover:text-white transition duration-150 ease-in-out"
+                >
                   {label}
                 </Link>
               </NavigationMenuLink>
