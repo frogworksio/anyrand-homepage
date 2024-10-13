@@ -16,7 +16,7 @@ export const HeroSection = () => {
             <span className="mr-2 text-primary">
               <Badge>New!</Badge>
             </span>
-            <a href="#">
+            <a href="https://scroll.io/blog" target="_blank" className="hover:underline hover:decoration-2">
               <span>We are live on Scroll</span>
             </a>
             <Image
