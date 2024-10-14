@@ -1,4 +1,4 @@
-# Anyrand homepage
+# anyrand VRF homepage
 
 Repository for the <a href="https://anyrand.com" target="_blank">anyrand.com</a> homepage. Templated based on <a href="https://github.com/nobruf/shadcn-landing-page.git" target="_blank">https://github.com/nobruf/shadcn-landing-page.git</a>.
 

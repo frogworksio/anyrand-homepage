@@ -12,7 +12,7 @@ import { TeamSection } from "@/components/layout/sections/team";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
 
 export const metadata = {
-  title: "Anyrand VRF",
+  title: "anyrand VRF",
   description: "Free, verifiable randomness for all EVM compatible blockchains.",
   keywords: [
     "verifiable randomness",
@@ -44,17 +44,17 @@ export const metadata = {
   openGraph: {
     type: "website",
     url: "https://anyrand.com",
-    title: "Anyrand VRF - Free, Verifiable Randomness for All EVM Chains",
-    description: "Anyrand VRF provides free, verifiable randomness for all EVM-compatible blockchains. Ensure fairness and transparency in decentralized applications.",
+    title: "anyrand VRF - Free, Verifiable Randomness for All EVM Chains",
+    description: "anyrand VRF provides free, verifiable randomness for all EVM-compatible blockchains. Ensure fairness and transparency in decentralized applications.",
     images: [
       {
         url: "/opengraph-image.png", // This will now be resolved using metadataBase
         width: 1200,
         height: 630,
-        alt: "Anyrand VRF",
+        alt: "anyrand VRF",
       },
     ],
-    site_name: "Anyrand VRF", // Name of the website
+    site_name: "anyrand VRF", // Name of the website
   },
 };
 
