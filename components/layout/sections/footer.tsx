@@ -51,7 +51,7 @@ export const FooterSection = () => {
                 </Link>
               </div>
               <div>
-                <Link href="mailto:gm@anyrand.com" target="_blank" className="opacity-60 hover:opacity-100">
+                <Link href="mailto:gm@frogworks.io" target="_blank" className="opacity-60 hover:opacity-100">
                   Email
                 </Link>
               </div>
