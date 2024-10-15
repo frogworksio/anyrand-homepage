@@ -29,7 +29,7 @@ export const HeroSection = () => {
               <Badge>New!</Badge>
             </span>
             <a
-              href="https://scroll.io/blog"
+              href="https://scroll.io/blog/anyrand-x-scroll"
               target="_blank"
               className="hover:underline hover:decoration-2"
             >
